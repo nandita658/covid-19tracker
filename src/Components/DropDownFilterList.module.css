@@ -1,0 +1,16 @@
+.selectInput {
+    margin-top: 3rem;
+}
+
+.selectInput select {
+    padding: 0.7rem;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: #474747;
+    width: 100%;
+}
+
+.selectInput select:focus {
+    outline: none;
+}

@@ -1,0 +1,32 @@
+.wrapper {
+    height: 150px;
+    width: 230px;
+    border-radius: 5px;
+}
+
+.wrapper .info {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.wrapper .info .title {
+    font-size: 18px;
+}
+
+.wrapper .info .cases {
+    font-size:  28px;
+    margin-top: 10px;
+    margin-bottom: 17px;
+}
+
+.wrapper .info .total {
+    font-size: 15px;
+}
+
+.wrapper .info .total span {
+    color: #dfdfdf;
+}
+
+.wrapper .info .active {
+    height: 60px;
+}

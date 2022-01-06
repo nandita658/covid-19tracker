@@ -1,0 +1,59 @@
+.countryDetails {
+    height: 80px;
+    width: 100%;
+    border-bottom: 1px solid lightgray;  
+    margin: 0;
+    padding-bottom: 0.5em !important;
+    margin-top: 2.8em !important;
+}
+
+.countryIcon {
+    padding-left: 9px;
+    float: left;
+    display: flex;
+    justify-content: space-between;
+    width: 120px;
+    margin-right: 10px;
+    text-align: left;
+}
+
+.countryIcon span {
+    font-size: 17px;
+}
+
+.countryIcon img {
+    width: 30px;
+    height: 20px;
+}
+
+.casesDetails {
+    height: 100%;
+    width: 84%;
+    float: left;
+    display: grid;
+    grid-template-columns: 33.333% 47.33% calc(100% - 47.33% - 33.33%);
+}
+
+.casesBox {
+    text-align: left;
+    padding-left: 12px;
+    font-family: sans-serif;
+}
+
+a {
+    color: #1644ba; 
+    text-decoration: none;
+    background-color: transparent;
+    font-size: 1.2rem;
+}
+
+p {
+    color: #b5b5b5;
+    font-weight: 400;
+    font-size: 1rem;
+    font-family: "Nunito";
+}
+
+p strong {
+    color: #3c3c3c;
+}

@@ -1,0 +1,34 @@
+.header {
+    background-image: linear-gradient(rgba(18, 98, 255, 0.9), rgba(18, 98, 255, 0.8)), url('https://www.uni-potsdam.de/typo3temp/assets/_processed_/1/3/csm_teaser_corona_03_2ea4d4e4fc.jpg');
+    height: 62vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.header .logo {
+    margin-top: 68px;
+}
+
+.header .logo h1 {
+    font-size: 45px;
+    font-weight: 600;
+    color: #F5F5F5;
+    margin-top: 68px;
+}
+
+.header .logo p {
+    letter-spacing: 1px;
+    font-weight: 300;
+    color: #F5F5F5;
+}
+
+.header .infoBox {
+    display: flex;
+    flex-direction: row;
+    margin-left: 140px;
+    margin-right: 140px;
+    margin-top: 95px;
+    justify-content: space-between;
+    color: #F5F5F5;
+}
