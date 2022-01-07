@@ -16,8 +16,7 @@
 }
 
 .countryTable {
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto;
     width: 60%;
     scrollbar-width: thin;
 }

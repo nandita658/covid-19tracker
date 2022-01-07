@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 
 import HeadingNames from '../Components/HeadingNames';
 
@@ -7,49 +7,19 @@ import CountryDetails from '../Components/CountryDetails';
 import Card from '../UI/Card';
 import DropDownFilterList from '../Components/DropDownFilterList';
 
-const CountriesStatistics = () => {
-    const [countryInformation, setCountryInformation] = useState([]);
+const CountriesStatistics = (props) => {
     const [searchInput, setSearchInput] = useState('');
     const [filteredSort, setFilteredSort] = useState('select');
-    const [isLoading, setIsLoading] = useState(true);
 
     const filterChangeHandler = selectedSort => {
         setFilteredSort(selectedSort);
     };
 
-    useEffect(() => {
-        const fetchCountryData = async () => {
-            const response = await fetch('https://corona.lmao.ninja/v2/countries?1&1');
-            const responseData = await response.json();
-
-            // console.log(responseData);
-
-            const loadedData = [];
-
-            for (const key in responseData) {
-                loadedData.push({
-                    id: key,
-                    country: responseData[key].country,
-                    flag: responseData[key].countryInfo.flag,
-                    totalCases: responseData[key].cases,
-                    todayCases: responseData[key].todayCases,
-                    totalDeaths: responseData[key].deaths,
-                    todayDeaths: responseData[key].todayDeaths,
-                    totalRecovered: responseData[key].recovered,
-                    todayRecovered: responseData[key].todayRecovered,
-                });
-            }
-            setCountryInformation(loadedData);
-            setIsLoading(false);
-        };
-        fetchCountryData();
-    }, []);
-
     const searchHandler = (rows) => {
         return rows.filter(row => row.country.toLowerCase().indexOf(searchInput.toLowerCase()) > -1);
     };
 
-    const data = searchHandler(countryInformation);
+    const data = searchHandler(props.countryDetails);
 
     const sortIncData = (data) => {
         const sortedData = [...data];
@@ -97,7 +67,7 @@ const CountriesStatistics = () => {
                 <div className={classes.filter}><DropDownFilterList selected={filteredSort} onChangeFilter={filterChangeHandler} /></div>
             </div>
             <HeadingNames />
-            {isLoading && 
+            {props.isLoading && 
                 <p 
                     style={{
                         fontFamily: "sans-serif",
@@ -108,7 +78,7 @@ const CountriesStatistics = () => {
                     Loading...
                 </p>
             }
-            {!isLoading &&
+            {!props.isLoading &&
                 <div className={classes.countryTable}>
                     <Card className={classes.countryStatsCard}>
                         <ul className={classes.countryList}>
