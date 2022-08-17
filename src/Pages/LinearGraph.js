@@ -32,7 +32,7 @@ const LinearGraph = (props) => {
 
     useEffect(() => {
         const fetchHistoryData = async () => {
-            const response = await fetch('https://corona.lmao.ninja/v2/historical/all');
+            const response = await fetch('https://disease.sh/v3/covid-19/historical/all');
             const responseData = await response.json();
             let graphData = buildGraphData(responseData, 'cases');
             setData(graphData);

@@ -12,7 +12,7 @@ const Header = () => {
 
     useEffect(() => {
         const fetchInfo = async() => {
-            const response = await fetch('https://corona.lmao.ninja/v2/all?yesterday');
+            const response = await fetch('https://disease.sh/v3/covid-19/all');
             const responseData = await response.json();
             // console.log(responseData);
             setInfo(responseData);

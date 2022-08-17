@@ -48,7 +48,7 @@ function App() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch('https://corona.lmao.ninja/v2/countries?1&1');
+      const response = await fetch('https://disease.sh/v3/covid-19/countries');
       const responseData = await response.json();
 
       processLoadData(responseData);
